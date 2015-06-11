@@ -6,5 +6,8 @@
 	<!--Menu label to fetch updated weather info from the server-->
 	<string name="action_refresh" translatable="false">Refresh</string>
 	<string name="title_activity_detail">DetailActivity</string>
-	<string name="title_activity_Settings">Settings</string>
+
+	<string name="pref_location_key" >Location</string>
+	<string name="pref_location_label" translate="false">location</string>
+	<string name="pref_location_default" translate="false">HangZhou</string>
 </resources>

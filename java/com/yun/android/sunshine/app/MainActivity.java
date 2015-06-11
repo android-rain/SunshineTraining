@@ -39,6 +39,7 @@ public class MainActivity extends ActionBarActivity {
 
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
+
             return true;
         }
 
