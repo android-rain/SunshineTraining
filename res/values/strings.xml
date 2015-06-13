@@ -15,5 +15,7 @@
 	<string name="pref_tempUnits_key">pref_tempUnits_key</string>
 	<string name="pref_tempUnits_default" translate="false">metric</string>
 
+	<string name="preferred_location">Location</string>
+
 
 </resources>

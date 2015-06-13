@@ -4,5 +4,9 @@
 	>
 	<item android:id="@+id/action_refresh" android:title="@string/action_refresh"
 	      android:orderInCategory="100" app:showAsAction="never"/>
+	<item android:id="@+id/preferred_location"
+	      android:title="@string/preferred_location"
+	      android:orderInCategory="100" app:showAsAction="never"/>
+
 
 </menu>
