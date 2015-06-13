@@ -16,6 +16,7 @@
 	<string name="pref_tempUnits_default" translate="false">metric</string>
 
 	<string name="preferred_location">Location</string>
+	<string name="send_to">Share text to..</string>
 
 
 </resources>
