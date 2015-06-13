@@ -80,9 +80,13 @@ public class ForecastFragment extends Fragment {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         String location = sharedPreferences.getString(getString(R.string.pref_location_key),
                 getString(R.string.pref_location_default));
+        //creat unit type
+//        Resources resources = getResources();
+//        String[] units = resources.getStringArray(R.array.pref_tempUnits_list);
+        String unit = sharedPreferences.getString(getString(R.string.pref_tempUnits_key),getString(R.string.pref_tempUnits_default));
 
         FetchWeatherTask fetchWeatherTask = new FetchWeatherTask();
-        fetchWeatherTask.execute(location);
+        fetchWeatherTask.execute(location, unit);
     }
 
     @Override
@@ -126,7 +130,7 @@ public class ForecastFragment extends Fragment {
         return rootView;
     }
 
-    public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
+    public class FetchWeatherTask extends AsyncTask<String, String, String[]> {
 
         private final String LOG_TAG = FetchWeatherTask.class.getSimpleName();
 
@@ -156,7 +160,7 @@ public class ForecastFragment extends Fragment {
             String forecastJsonStr = null;
 
             String format = "json";
-            String units = "metric";
+//            String units = "metric";
             int numDays = 7;
             try {
 
@@ -170,7 +174,7 @@ public class ForecastFragment extends Fragment {
                 Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon()
                         .appendQueryParameter(QUERY_PARAM, params[0])
                         .appendQueryParameter(FORMAT_PARAM, format)
-                        .appendQueryParameter(UNITS_PARAM, units)
+                        .appendQueryParameter(UNITS_PARAM, params[1])
                         .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
                         .build();
 

@@ -10,4 +10,10 @@
 	<string name="pref_location_key" >Location</string>
 	<string name="pref_location_label" translate="false">location</string>
 	<string name="pref_location_default" translate="false">HangZhou</string>
+
+	<string name="pref_tempUnits_units">Units</string>
+	<string name="pref_tempUnits_key">pref_tempUnits_key</string>
+	<string name="pref_tempUnits_default" translate="false">metric</string>
+
+
 </resources>
