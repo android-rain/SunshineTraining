@@ -18,12 +18,44 @@ import android.widget.TextView;
 
 public class DetailActivity extends ActionBarActivity {
 
+    //    be used to test the sequence of lifecycle events following a device rotation
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("on : ", "Destroy");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("on : ", "Stop");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("on : ", "Start");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("on : ", "Resume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("on : ", "Pause");
+    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        Log.i("on : ", "Create");
 //        if (savedInstanceState == null){
 //            getSupportFragmentManager().beginTransaction()
 //                    .add(R.id.action_bar_container, new DetailFragment())
